@@ -38,6 +38,34 @@ void Time::get(int &x, int &y)
 ostream& operator<<(ostream& out, const Time& T)
 
 {
-	out << T.h << ":" << T.m << endl;
+	if (T.m == 0)
+	{
+		out << T.h << ":" << T.m <<0<< endl;
+	}
+	else
+	{
+		out << T.h << ":" << T.m << endl;
+	}
 	return out;
+}
+
+Time Time::operator++(int)
+{
+	Time Temp(h, m);
+	if (m == 59)
+	{
+		h++;
+		m = 00;
+	}
+	else
+	{
+		m++;
+	}
+	
+	if (h > 23)
+	{
+		h = 00;
+	}
+	return Temp;
+
 }

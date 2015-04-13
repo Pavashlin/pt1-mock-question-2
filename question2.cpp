@@ -22,8 +22,8 @@ using namespace std;
 // ***** DO NOT MODIFY CODE BELOW THIS LINE *****
 int main(int argc, char *argv[]) {
 
-	Time myTime(8, 40);									// instantiate time class 
-
+	Time myTime(8, 59);									// instantiate time class 
+	myTime++;
 	cout << "CM3 starts at " << myTime << endl;			// demonstrate overloaded stream insertion operator
 
 	myTime.set(10, 30);									// change the time

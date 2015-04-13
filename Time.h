@@ -16,7 +16,7 @@ public:
 	void set(int, int);
 	void get(int &x, int &y);
 	friend ostream &operator<<(ostream &, const Time &);
-	
+	Time operator++(int);
 };
 
 #endif
