@@ -15,7 +15,7 @@ public:
 	Time(int, int);
 	~Time();
 	void set(int, int);
-	void get(int, int);
+	void get(int &x, int &y);
 };
 
 #endif

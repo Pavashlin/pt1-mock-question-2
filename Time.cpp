@@ -27,3 +27,15 @@ void Time::set(int x, int y)
 	m = y;
 }
 
+void Time::get(int &x, int &y)
+{
+	x = h;
+	y = m;
+}
+
+ostream& operator<<(ostream& out, const Time& t)
+{
+	int hours, minutes;
+
+
+}
