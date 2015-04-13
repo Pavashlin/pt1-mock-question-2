@@ -10,12 +10,13 @@ private:
 	int m;
 
 public:
-	friend ostream &operator<<(ostream &, const Time &);
 	Time();
 	Time(int, int);
 	~Time();
 	void set(int, int);
 	void get(int &x, int &y);
+	friend ostream &operator<<(ostream &, const Time &);
+	
 };
 
 #endif

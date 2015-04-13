@@ -1,6 +1,8 @@
-#include "Time.h"
+
 #include <iostream>
+#include "Time.h"                       //******always after iostream for friendhsip to work
 #include <string>
+
 using namespace std;
 
 
@@ -33,9 +35,9 @@ void Time::get(int &x, int &y)
 	y = m;
 }
 
-ostream& operator<<(ostream& out, const Time& t)
+ostream& operator<<(ostream& out, const Time& T)
+
 {
-	int hours, minutes;
-
-
+	out << T.h << ":" << T.m << endl;
+	return out;
 }
