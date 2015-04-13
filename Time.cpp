@@ -6,14 +6,14 @@
 using namespace std;
 
 
-Time::Time()
+Time::Time()																	//constructor
 {
 	h = 0;
 	m = 0;
 }
 
 
-Time::~Time()
+Time::~Time()																	//destructor
 {
 }
 
@@ -23,13 +23,13 @@ Time::Time(int x, int y)
 	m = y;
 }
 
-void Time::set(int x, int y)
+void Time::set(int x, int y)													//mutator
 {
 	h = x;
 	m = y;
 }
 
-void Time::get(int &x, int &y)
+void Time::get(int &x, int &y)													//accessor
 {
 	x = h;
 	y = m;
@@ -39,7 +39,7 @@ ostream& operator<<(ostream& out, const Time& T)
 
 {
 	if (T.m == 0)
-	{
+	{																			//produces an extra 0 for better looking output
 		out << T.h << ":" << T.m <<0<< endl;
 	}
 	else
@@ -52,7 +52,7 @@ ostream& operator<<(ostream& out, const Time& T)
 Time Time::operator++(int)
 {
 	Time Temp(h, m);
-	if (m == 59)
+	if (m == 59)															//increments the hour upon going above m=59
 	{
 		h++;
 		m = 00;
